@@ -1,0 +1,21 @@
+<div class="exhibition">
+    <div class="exhibit" *ngFor="let exhibit of exhibits">
+        <div class="exhibit-content">
+            <a title="Details" [routerLink]="[exhibit.Id]">
+                <img [src]="'data('+exhibit.File.toString()+')'">
+                <span class="details-icon"><i class="fa fa-external-link-alt"></i></span>
+            </a>
+        </div>
+        <div class="exhibit-footer row">
+            <div class="col">
+                <label class="text-muted">{{exhibit.User.Username}} - {{exhibit.UploadDate | date:'d MMM y'}}</label>
+            </div>
+            <div class="col-auto">
+                <a class="comments-link" title="Comment" [routerLink]="[exhibit.Id]"><i class="fa fa-comment-alt"></i></a>
+            </div>
+            <div class="col-auto">
+                <span (click)="like(exhibit.Id)" class="likes"><i class="fa-thumbs-up" [class.fas]="likedByUser(exhibit.Id)" [class.far]="!likedByUser(exhibit.Id)">{{exhibit.Likes}}</i></span>
+            </div>
+        </div>
+    </div>
+</div>

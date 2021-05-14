@@ -1,0 +1,64 @@
+.exhibition{
+    width: 100%;
+    height: auto;
+    padding: 5% 3% 5% 3%;
+    background-color: lightgray;
+
+    .exhibit{
+        height: 30vh;
+        width: auto;
+        background-color: white;
+        margin: 5%;
+
+        .exhibit-content{
+            height: 80%;
+            width: 100%;
+            position: relative;
+
+            a{
+                text-decoration: none;
+                height: 100%;
+                width: 100%;
+
+                img{
+                    height: 100%;
+                    width: auto;
+                    background-color: ghostwhite;
+                }
+
+                .details-icon{
+                    position: absolute;
+                    top: 5px;
+                    right: 25px;
+                    min-height: 25px;
+                }
+            }
+
+            a:hover .details-icon{
+                min-height: 30px;
+                transition: min-height 0.4s ease-in-out;
+            }
+        }
+
+        .exhibit-footer{
+            height: 20%;
+
+            .comments-link{
+                text-decoration: none;
+                position: absolute;
+                top: 5px;
+                right: 25px;
+                min-height: 25px;
+            }
+
+            .comments-link:hover{
+                min-height: 30px;
+                transition: min-height 0.4s ease-in-out;
+            }
+
+            .likes{
+                cursor: pointer;
+            }
+        }
+    }
+}
