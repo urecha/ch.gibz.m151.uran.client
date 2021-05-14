@@ -1,0 +1,53 @@
+nav{
+    width: 100%;
+    background-color: ghostwhite;
+    display: flex;
+    flex-direction: row;
+
+    h3{
+        color: black;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+
+        li{
+            display: block;
+            color: lightgray;
+        }
+
+        li:hover{
+            color: gray;
+        }
+
+        .active{
+            color: black;
+        }
+    }
+}
+
+.messages {
+    position: fixed;
+    left: 2em;
+    bottom: 2em;
+    z-index: 1;
+    width: 300px;
+
+    .message {
+        animation: 0.5s move-in;
+        box-shadow: 0 10px 20px #0003;
+    }
+    
+    @keyframes move-in {
+        from {
+            transform: translateX(-400px);
+        }
+    
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
